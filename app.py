@@ -43,8 +43,8 @@ except:
   
 #Создаем переменную через цикл находим сумму возраста и находим средний
 #возраст всех юзеров
-    average_age = 0
-    for i in range(len(user_list)):
-        average_age += int(user_list[i]["age"])
-    average_age = average_age / int(len(user_list))
-    print(f'Средний возраст пользователей: {average_age}')
+average_age = 0
+for i in range(len(user_list)):
+    average_age += int(user_list[i]["age"])
+average_age = average_age / int(len(user_list))
+print(f'\nСредний возраст пользователей: {average_age}')
