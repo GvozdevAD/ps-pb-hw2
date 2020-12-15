@@ -12,6 +12,7 @@ user4 = {'name' : 'Анна' , 'age' : '27' , 'account' : account4}
 #Создаем список из словарей
 user_list = [user1, user2, user3, user4]
 
+
 key_name = input('Введите ключ (name или account): ')
 #Проверяем ключ
 if key_name.lower() == 'name' or key_name.lower() == 'account':
@@ -23,8 +24,8 @@ else:
 #Проверяем число и выводим данные
 try:
     number_user = int(input('Введите порядковый номер: '))
-    user = number_user - 1
     print(f'\nДанные по юзеру № {number_user}')
+    user = number_user - 1
     print(f'имя: {user_list[user]["name"]}')
     print(f'возраст: {user_list[user]["age"]}')
     print(f'логин: {user_list[user]["account"]["login"]}')
@@ -36,7 +37,12 @@ try:
         average_age += int(user_list[i]["age"])
     average_age = average_age / int(len(user_list))
     print(f'Средний возраст пользователей: {average_age}')
+
 except:
     print('Пользователь с указанным номером не найден')
-
-
+  
+moving_user = int(input('\nВведите номер пользователя, который нужно переместить в конец: '))
+print(f'Список до изменения:\n {user_list}')
+element = user_list.pop(moving_user-1)
+user_list.append(element)
+print(f'Список после изменения:\n {user_list}')
