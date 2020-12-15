@@ -33,7 +33,7 @@ try:
 
 #Перенос в конец списка
     moving_user = int(input('\nВведите номер пользователя, который нужно переместить в конец: '))
-    print(f'Перемещаем пользователя: {user_list[moving_user]["name"]}')
+    print(f'Перемещаем пользователя: {user_list[moving_user-1]["name"]}')
     print(f'Список до изменения:\n {user_list}')
     element = user_list.pop(moving_user - 1)
     user_list.append(element)
