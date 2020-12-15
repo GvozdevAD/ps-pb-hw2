@@ -30,15 +30,10 @@ try:
     print(f'возраст: {user_list[user]["age"]}')
     print(f'логин: {user_list[user]["account"]["login"]}')
     print(f'пароль: {user_list[user]["account"]["password"]}')
-#Создаем переменную через цикл находим сумму возраста и находим средний
-#возраст всех юзеров
-    average_age = 0
-    for i in range(len(user_list)):
-        average_age += int(user_list[i]["age"])
-    average_age = average_age / int(len(user_list))
-    print(f'Средний возраст пользователей: {average_age}')
+
 #Перенос в конец списка
     moving_user = int(input('\nВведите номер пользователя, который нужно переместить в конец: '))
+    print(f'Перемещаем пользователя: {user_list[moving_user]["name"]}')
     print(f'Список до изменения:\n {user_list}')
     element = user_list.pop(moving_user - 1)
     user_list.append(element)
@@ -46,4 +41,10 @@ try:
 except:
     print('Пользователь с указанным номером не найден')
   
-
+#Создаем переменную через цикл находим сумму возраста и находим средний
+#возраст всех юзеров
+    average_age = 0
+    for i in range(len(user_list)):
+        average_age += int(user_list[i]["age"])
+    average_age = average_age / int(len(user_list))
+    print(f'Средний возраст пользователей: {average_age}')
